@@ -5,3 +5,6 @@ synthetic_dataset/
 test_dataset/
 ocr_results/
 fonts/
+
+# Work in progress
+train_surya.py
