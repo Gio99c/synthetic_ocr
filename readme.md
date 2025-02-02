@@ -95,10 +95,10 @@ python evaluate_ocr.py
 
 Below are example images (reduced-size for illustration) depicting the kind of synthetic data generated:
 
-<img src="images/sample_1.png" alt="Sample 1" width="45%"/>
-<img src="images/sample_2.png" alt="Sample 2" width="45%"/>
-<img src="images/sample_3.png" alt="Sample 3" width="45%"/>
-<img src="images/sample_4.png" alt="Sample 3" width="45%"/>
+<img src="images/sample_1.png" alt="Sample 1" width="40%"/>
+<img src="images/sample_2.png" alt="Sample 2" width="40%"/>
+<img src="images/sample_3.png" alt="Sample 3" width="40%"/>
+<img src="images/sample_4.png" alt="Sample 3" width="40%"/>
 
 Each image has an accompanying annotation file containing text ground truth and bounding box coordinates.
 
