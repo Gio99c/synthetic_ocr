@@ -1,0 +1,6 @@
+.venv
+
+synthetic_dataset/
+test_dataset/
+ocr_results/
+fonts/
