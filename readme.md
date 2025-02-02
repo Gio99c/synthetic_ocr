@@ -9,6 +9,23 @@ This repository provides an automated pipeline for generating a high-volume synt
 - **Text on visually noisy backgrounds** matching floor plan diagrams.
 - **Text within simple icons** to simulate equipment tagging.
 
+## Sample Outputs
+
+Below are example images (reduced-size for illustration) depicting the kind of synthetic data generated:
+
+<table>
+  <tr>
+    <td><img src="images/sample_1.png" alt="Sample 1" width="100%"></td>
+    <td><img src="images/sample_2.png" alt="Sample 2" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="images/sample_3.png" alt="Sample 3" width="100%"></td>
+    <td><img src="images/sample_4.png" alt="Sample 4" width="100%"></td>
+  </tr>
+</table>
+
+Each image has an accompanying annotation file containing text ground truth and bounding box coordinates.
+
 These synthetic images are accompanied by JSON annotations containing:
 1. Image path  
 2. Bounding box coordinates  
@@ -90,23 +107,6 @@ python evaluate_ocr.py
    - **CER**: Measures character-level accuracy.  
    - **WER**: Evaluates word-level accuracy.  
    - **IoU**: Compares ground-truth bounding boxes and detected bounding boxes.
-
-## Sample Outputs
-
-Below are example images (reduced-size for illustration) depicting the kind of synthetic data generated:
-
-<table>
-  <tr>
-    <td><img src="images/sample_1.png" alt="Sample 1" width="100%"></td>
-    <td><img src="images/sample_2.png" alt="Sample 2" width="100%"></td>
-  </tr>
-  <tr>
-    <td><img src="images/sample_3.png" alt="Sample 3" width="100%"></td>
-    <td><img src="images/sample_4.png" alt="Sample 4" width="100%"></td>
-  </tr>
-</table>
-
-Each image has an accompanying annotation file containing text ground truth and bounding box coordinates.
 
 ## Notes
 
