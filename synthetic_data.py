@@ -25,7 +25,7 @@ MAX_TEXT_LENGTH = 15
 TEXT_LENGTH_MEAN = 3
 TEXT_LENGTH_STD = 2
 
-# Larger text range so text is more prominent
+# Text size control
 TEXT_SIZE_RANGE = (100, 180)
 
 # Probability of having an underline
@@ -345,7 +345,7 @@ def draw_shape_and_pattern(shape_type, shape_w, shape_h):
     for i in range(len(offset_pts)):
         start = offset_pts[i]
         end = offset_pts[(i+1) % len(offset_pts)]
-        shape_draw.line([start, end], fill=(0,0,0), width=3)  # Increased width slightly
+        shape_draw.line([start, end], fill=(0,0,0), width=3)
 
     return shape_surf, margin
 
@@ -362,7 +362,7 @@ def generate_synthetic_sample(idx, output_dir):
     # 2) Generate text
     text = generate_text()
 
-    # 3) Pick font or fallback - we'll adjust size if needed
+    # 3) Pick font or fallback
     try:
         initial_font_size = random.randint(*TEXT_SIZE_RANGE)
         font_path = random.choice(FONTS)
@@ -379,7 +379,7 @@ def generate_synthetic_sample(idx, output_dir):
     text_w, text_h = font.getbbox(text)[2:]
     angle = random.choice(ROTATIONS)
     
-    # Calculate rotated text dimensions
+    # Calculate rotated text dimensions - not used now
     if angle in [90, 270]:
         rotated_text_w, rotated_text_h = text_h, text_w
     else:
@@ -431,7 +431,6 @@ def generate_synthetic_sample(idx, output_dir):
     
     # Final safety check - if still out of bounds, skip text
     if tx + rt_w > IMAGE_SIZE[0] or ty + rt_h > IMAGE_SIZE[1]:
-        # Could optionally retry with even smaller font...
         return generate_synthetic_sample(idx, output_dir)
         
     img.paste(rotated_text, (tx,ty), rotated_text)
