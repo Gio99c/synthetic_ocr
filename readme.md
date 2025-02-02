@@ -95,9 +95,10 @@ python evaluate_ocr.py
 
 Below are example images (reduced-size for illustration) depicting the kind of synthetic data generated:
 
-![Sample 1](images/sample_1.png)
-![Sample 2](images/sample_2.png)
-![Sample 3](images/sample_3.png)
+<img src="images/sample_1.png" alt="Sample 1" width="45%"/>
+<img src="images/sample_2.png" alt="Sample 2" width="45%"/>
+<img src="images/sample_3.png" alt="Sample 3" width="45%"/>
+<img src="images/sample_4.png" alt="Sample 3" width="45%"/>
 
 Each image has an accompanying annotation file containing text ground truth and bounding box coordinates.
 
@@ -107,9 +108,6 @@ Each image has an accompanying annotation file containing text ground truth and 
 - **Mechanical detail diagrams** (complex engineering drawings) are out of scope; only text-centric elements are generated.  
 - The generation approach is highly configurable, enabling diverse text scenarios, rotation angles, background patterns, and shapes to rigorously train in-domain OCR models.
 
-## License
-
-This repository is provided under an open-source license (MIT, Apache 2.0, etc.). If absent, please select and apply one appropriately.
 
 ## Contributing
 
